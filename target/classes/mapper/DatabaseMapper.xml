@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hiep.angular.mapper.AngularMapper">
+
+	<select id="getData" resultType="com.hiep.angular.entity.AngularEntity">
+		SELECT * FROM hiep_angular
+	</select>
+	
+	<select id="getDataById" resultType="com.hiep.angular.entity.AngularEntity">
+		SELECT * FROM hiep_angular where id = #{id}
+	</select>
+	
+	<insert id="addData">
+		INSERT INTO hiep_angular(full_name, email, phone_number) VALUES
+		(#{full_name}, #{email}, #{phone_number})
+	</insert>
+	
+	<delete id="deleteDataById">
+		DELETE FROM hiep_angular WHERE id=#{id}
+	</delete>
+	
+	<update id="updateData">
+		UPDATE hiep_angular
+		SET full_name=#{full_name}, email=#{email}, phone_number=#{phone_number} WHERE id=#{id}
+	</update>
+	
+</mapper>

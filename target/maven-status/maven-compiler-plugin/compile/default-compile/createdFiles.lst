@@ -1,0 +1,5 @@
+com/hiep/angular/mapper/AngularMapper.class
+com/hiep/angular/entity/AngularEntity.class
+com/hiep/angular/controller/MainController.class
+com/hiep/angular/JavaApiAngularApplication.class
+com/hiep/angular/model/AngularModel.class
